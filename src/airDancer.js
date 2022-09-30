@@ -1,6 +1,6 @@
 var makeAirDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
-  // Some such OldStep initialization TBD
+
 };
 
 makeAirDancer.prototype = Object.create(makeDancer.prototype);

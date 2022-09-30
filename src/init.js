@@ -22,12 +22,32 @@ $(document).ready(function() {
 
     // make a dancer with a random position
 
-    var dancer = dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+    var dancer = new dancerMakerFunction(
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
       Math.random() * 1000
     );
+
+    var $img = $('<img>');
+
+    var path;
+
+    if (dancerMakerFunctionName === 'makeAirDancer') {
+      path = 'assets/gifs/birb.gif';
+      $img.addClass('air');
+    } else if (dancerMakerFunctionName === 'makeWaterDancer') {
+      path = 'assets/gifs/leftShark.gif';
+      $img.addClass('water');
+    }
+
+    $img.attr('src', path);
+
+    dancer.$node.append($img);
     $('body').append(dancer.$node);
   });
 });
 
+// To add different dancer types to DOM:
+// - Get image path (set variable on constructor)
+// - Add class name and src to node (using jQuery ??)
+// - Append node to body

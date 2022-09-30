@@ -4,9 +4,6 @@ var makeWaterDancer = function(top, left, timeBetweenSteps) {
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
 
-  // figure out how to define OldStep here
-  // var ?? oldStep = something.step;
-
 };
 
 makeWaterDancer.prototype = Object.create(makeDancer.prototype);
