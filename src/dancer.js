@@ -4,8 +4,8 @@ var makeDancer = function(top, left, timeBetweenSteps) {
   // use jQuery to create an HTML <span> tag
   this.$node = $('<span class="dancer"></span>');
 
-  this.top = top;
-  this.left = left;
+  this.top = top; // y
+  this.left = left; // x
   this.timeBetweenSteps = timeBetweenSteps;
 
   this.step();
