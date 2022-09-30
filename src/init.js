@@ -47,29 +47,24 @@ $(document).ready(function() {
 
     dancer.$node.append($img);
     $('body').append(dancer.$node);
-    window.dancers.push(dancer.$node);
+    console.log('Dancer', dancer);
+    window.dancers.push(dancer);
   });
 
   $('.lineUpButton').on('click', function(event) {
-    // TESTING LOGIC
-    console.log(window.dancers[0]);
-    // window.dancers[0][0].setPosition(10, 20);
+    // console.log(window.dancers[0]);
+    // console.log(event);
 
-    // var styleSettings = {
-    //   top: this.top,
-    //   left: this.left
-    // };
-    // this.$node.css(styleSettings);
-
-    // get dancer and call it "prev"
-    // assign it some explicit left value
-    // loop over dancers array
-    // as we continue looping, set left val of current to left val of prev + ~some (consistent) value, but the SAME TOP VAL for all dancers
+    // Loop over window.dancers array
+    window.dancers.forEach(function(item) {
+      // Call lineUp method on each dancer
+      // dancer.lineUp.call(); ??
+      console.log(item.lineUp);
+      item.lineUp();
+    });
   });
 
   $('body').on('mouseover', '.air', function(event) {
-    console.log(this);
-
     $(this).css({
       'transition-property': 'transform',
       'transition-duration': '2s',
@@ -77,3 +72,10 @@ $(document).ready(function() {
     });
   });
 });
+
+// Old Lineup Logic - Buggy
+// window.dancers[0][0].setPosition(10, 20);
+// get dancer and call it "prev"
+// assign it some explicit left value
+// loop over dancers array
+// as we continue looping, set left val of current to left val of prev + ~some (consistent) value, but the SAME TOP VAL for all dancers
