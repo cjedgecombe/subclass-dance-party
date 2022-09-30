@@ -70,17 +70,10 @@ $(document).ready(function() {
   $('body').on('mouseover', '.air', function(event) {
     console.log(this);
 
-    // use jquery to select this
     $(this).css({
       'transition-property': 'transform',
       'transition-duration': '2s',
       'transform': 'rotate(3600deg)'
     });
-    // apply css rotation (however that's done...)
   });
 });
-
-// To add different dancer types to DOM:
-// - Get image path (set variable on constructor)
-// - Add class name and src to node (using jQuery ??)
-// - Append node to body
