@@ -38,6 +38,9 @@ $(document).ready(function() {
     } else if (dancerMakerFunctionName === 'makeWaterDancer') {
       path = 'assets/gifs/leftShark.gif';
       $img.addClass('water');
+    } else if (dancerMakerFunctionName === 'makeBlinkyDancer') {
+      path = 'assets/gifs/dancer.gif';
+      $img.addClass('dancer');
     }
 
     $img.attr('src', path);
@@ -62,6 +65,18 @@ $(document).ready(function() {
     // assign it some explicit left value
     // loop over dancers array
     // as we continue looping, set left val of current to left val of prev + ~some (consistent) value, but the SAME TOP VAL for all dancers
+  });
+
+  $('body').on('mouseover', '.air', function(event) {
+    console.log(this);
+
+    // use jquery to select this
+    $(this).css({
+      'transition-property': 'transform',
+      'transition-duration': '2s',
+      'transform': 'rotate(3600deg)'
+    });
+    // apply css rotation (however that's done...)
   });
 });
 
