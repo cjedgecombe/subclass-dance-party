@@ -21,6 +21,10 @@ describe('waterDancer', function() {
     expect(typeof waterDancer.swim).to.equal('function');
   });
 
+  it('should inherit a "lineUp" method from dancer super class', function() {
+    expect(typeof waterDancer.lineUp).to.equal('function');
+  });
+
   describe('dance', function() {
     it('should call step at least once per second', function() {
       sinon.spy(waterDancer, 'step');

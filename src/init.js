@@ -70,6 +70,7 @@ $(document).ready(function() {
       'transition-duration': '2s',
       'transform': 'rotate(3600deg)'
     });
+    //console.log($(this).css('transform'));
   });
 });
 

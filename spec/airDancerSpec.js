@@ -12,11 +12,16 @@ describe('airDancer', function() {
     expect(airDancer.$node).to.be.an.instanceof(jQuery);
   });
 
-  // it('should have a step function that makes its node blink', function() {
-  //   sinon.spy(airDancer.$node, 'toggle');
-  //   airDancer.step();
-  //   expect(airDancer.$node.toggle.called).to.be.true;
+  // it('should have new css transition on mouseover', function() {
+  //   // get img element
+  //   // get element style attribute
+  //   // check if style attr has transform prop
+  //   expect(airDancer.$node.css('transition-duration')).to.equal('2s');
   // });
+
+  it('should inherit a "lineUp" method from dancer super class', function() {
+    expect(typeof airDancer.lineUp).to.equal('function');
+  });
 
   it('should have a "fly" method', function () {
     expect(typeof airDancer.fly).to.equal('function');
