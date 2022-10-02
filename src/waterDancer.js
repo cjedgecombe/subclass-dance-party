@@ -12,6 +12,6 @@ makeWaterDancer.prototype.constructor = makeWaterDancer;
 // things water dancers can do ?? Swim
 // takes in : positional "location" or similar
 // method functionality: move position, interact with other water dancers in some way
-makeWaterDancer.prototype.swim = function(loc) {
+makeWaterDancer.prototype.swim = function() {
   // set up location with makeDancer's setPosition method once we figure out how to access
 };
