@@ -12,11 +12,6 @@ describe('waterDancer', function() {
     expect(waterDancer.$node).to.be.an.instanceof(jQuery);
   });
 
-  // it('should have a step function that makes its node blink', function() {
-  //   sinon.spy(waterDancer.$node, 'toggle');
-  //   waterDancer.step();
-  //   expect(waterDancer.$node.toggle.called).to.be.true;
-  // });
   it('should have a "swim" method', function() {
     expect(typeof waterDancer.swim).to.equal('function');
   });
